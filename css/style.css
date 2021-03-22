@@ -261,6 +261,11 @@ header .container {
   margin: 0;
   top: 70%;
   left: 4%;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 1.17;
+  color: #757575;
   transform: translateY(-100%);
 
   transition: transform 250 ms var(--cubic);
@@ -269,6 +274,7 @@ header .container {
 .form-input {
   width: 100%;
   margin: 0;
+  padding-left: 30px;
   padding-top: 14px;
   font: inherit;
   border-radius: 4px;
@@ -280,8 +286,34 @@ header .container {
 .form-input:not(:placeholder-shown) + .form-label {
   transform: translateY(-55px) translateX(-14px);
   transition: transform 250ms var(--cubic);
-  border-color: 1px solid var(--accent-color);
 }
+
+textarea {
+  resize: none;
+}
+
+textarea:focus,
+.form-input:focus {
+  outline: 1px solid var(--accent-color);
+}
+
+.icon-check {
+  display: flex;
+  justify-content: start;
+  margin-left: 57px;
+  margin-right: 9px;
+}
+
+/* span .text-check {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+  text-decoration: underline;
+} */
 
 .icon-form {
   position: absolute;
@@ -311,11 +343,39 @@ header .container {
   opacity: 0;
 }
 
+textarea {
+  padding: 12px;
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-label-feedback {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 1.17;
+  color: #757575;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 7px;
+}
+
 .form-input:focus-within ~ .icon-form {
-  transform: translateY(140%);
+  transform: translateY(80%);
   fill: var(--accent-color);
   transition: transform 250ms var(--cubic);
   opacity: 1;
+}
+
+.form-field-modal {
+  margin-bottom: 28px;
+  position: relative;
+  content: '';
 }
 
 .modal-title {
