@@ -259,7 +259,7 @@ header .container {
 .form-label {
   position: absolute;
   margin: 0;
-  top: 50%;
+  top: 70%;
   left: 4%;
   transform: translateY(-100%);
 
@@ -276,31 +276,46 @@ header .container {
   background: #ffffff;
 }
 
-.form-input:focus ~ .form-label,
-.form-input:not(:placeholder-shown) ~ .form-label {
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
   transform: translateY(-55px) translateX(-14px);
   transition: transform 250ms var(--cubic);
   border-color: 1px solid var(--accent-color);
 }
 
 .icon-form {
+  position: absolute;
+  content: '';
   margin-left: 15px;
   margin-right: 15px;
+  top: 0;
+  left: 0;
   /* transform: translateY(-270%); */
-  transform: translateY(140%);
+  transform: translateY(450%);
   transition: transform 250ms var(--cubic);
-}
-
-.form-field-modal {
-  position: relative;
-  content: '';
   overflow: hidden;
 }
 
-.form-input:focus-within + .icon-form {
-  transform: translateY(-270%);
+.form-field-modal {
+  margin-bottom: 28px;
+  position: relative;
+  content: '';
+  /* overflow: hidden; */
+}
+
+.icon-form {
+  margin-left: 15px;
+  margin-right: 15px;
+  transform: translateY(420%);
+  transition: transform 250ms var(--cubic);
+  opacity: 0;
+}
+
+.form-input:focus-within ~ .icon-form {
+  transform: translateY(140%);
   fill: var(--accent-color);
   transition: transform 250ms var(--cubic);
+  opacity: 1;
 }
 
 .modal-title {
