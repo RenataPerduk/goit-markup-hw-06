@@ -279,6 +279,7 @@ header .container {
   font: inherit;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
+  transition: border-color 250ms var(--cubic);
   background: #ffffff;
 }
 
@@ -286,6 +287,17 @@ header .container {
 .form-input:not(:placeholder-shown) + .form-label {
   transform: translateY(-55px) translateX(-14px);
   transition: transform 250ms var(--cubic);
+}
+
+.checkbox-text {
+  width: 400px;
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+  white-space: nowrap;
 }
 
 textarea {
@@ -304,10 +316,19 @@ textarea:focus,
   margin-right: 9px;
 } */
 
-.icon-check {
-  fill: #ffffff;
-  background-color: var(--accent-color);
-  outline: var(--accent-color);
+.form-label-check {
+  width: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.check {
+  text-decoration: underline;
+  color: var(--accent-color);
+  white-space: nowrap;
 }
 
 .checkbox {
@@ -323,16 +344,9 @@ textarea:focus,
   overflow: hidden;
 }
 
-/* span .text-check {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--accent-color);
-  text-decoration: underline;
-} */
+.modal-link.btn {
+  margin: 0 auto;
+}
 
 .icon-form {
   position: absolute;
