@@ -462,7 +462,7 @@ textarea {
 label {
   display: flex;
   flex-direction: column;
-  margin-bottom: 7px;
+  /* margin-bottom: 7px; */
 }
 
 .form-input:focus-within ~ .icon-form {
@@ -501,7 +501,7 @@ label {
   text-align: center;
   cursor: pointer;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-icon {
@@ -509,13 +509,16 @@ label {
 }
 
 .modal-close-btn .icon-contacts {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-right: 0;
 }
 
 .modal-close-btn:hover {
   color: var(--accent-color);
-  border-color: var(--accent-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -781,6 +784,9 @@ ul.team-list {
   background-color: #ffffff;
   color: var(--accent-color);
   border-color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-list-item {
@@ -930,6 +936,7 @@ ul.client-list {
 
 .form-field {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   width: 100%;
   box-sizing: border-box;
@@ -938,16 +945,23 @@ ul.client-list {
 
 input {
   width: 358px;
-  padding: 15px 295px 15px 16px;
-  font-family: inherit;
+  padding: 0;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background-color: var(--slogan-footer-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
 }
-
+/* 
 label {
   margin-bottom: 8px;
-}
+} */
 
 .icon-send {
   margin-left: 10px;
@@ -956,18 +970,20 @@ label {
 
 .btn-send {
   display: flex;
-  color: #ffffff;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 29px;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.875;
+  align-items: center;
   width: 200px;
+  height: 50px;
   margin-left: 12px;
+  padding-left: 29px;
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  cursor: pointer;
 }
 
 .portfolio {
