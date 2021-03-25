@@ -296,6 +296,10 @@ header .container {
   transition: color 250ms var(--cubic), outline 250ms var(--accent-color);
 }
 
+.form-input:focus {
+  outline: var(--accent-color);
+}
+
 .checkbox-text {
   display: flex;
   width: 400px;
