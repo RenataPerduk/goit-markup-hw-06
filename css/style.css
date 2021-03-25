@@ -314,19 +314,17 @@ header .container {
 
 textarea {
   resize: none;
-  transition: border 250 ms var(--accent-color);
-}
-
-textarea:focus,
-.form-input:focus {
-  border: 1px solid var(--accent-color);
-  transition: border 250 ms var(--accent-color);
+  transition: border 250ms var(--accent-color);
 }
 
 textarea:hover,
 .form-input:hover {
   border: 1px solid var(--accent-color);
   transition: border 250 ms var(--accent-color);
+}
+
+.form-label-feedback:focus {
+  border: 1px solid var(--accent-color);
 }
 
 .custom-checkbox {
