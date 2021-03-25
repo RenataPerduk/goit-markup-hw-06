@@ -500,8 +500,6 @@ label {
   background-color: #ffffff;
   text-align: center;
   cursor: pointer;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-icon {
@@ -510,15 +508,13 @@ label {
 
 .modal-close-btn .icon-contacts {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-right: 0;
 }
 
 .modal-close-btn:hover {
   color: var(--accent-color);
-  border: var(--accent-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-color: var(--accent-color);
 }
 
 .backdrop.is-hidden {
